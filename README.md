@@ -1,5 +1,4 @@
-# simple_text_mining_library
-## Simple C# text mining library
+# Simple C# text mining library
 
 ### Goals:
 * Create an easy and stable text mining lbirary for C#
