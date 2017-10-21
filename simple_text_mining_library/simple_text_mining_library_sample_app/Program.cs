@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,14 +15,14 @@ namespace simple_text_mining_library_sample_app
         static void Main(string[] args)
         {
 
-            string filePath = Directory.GetFiles("C:/test/books/").Where(x => x.Contains("12383")).First();
+            string filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"SampleBooks\10012.txt");
             string sampleInputText = File.ReadAllText(filePath);
 
             MineText mineText = new MineText();
             mineText.textMiningLanguage = TextMiningLanguage.English;
 
-            string a = mineText.CleanText(sampleInputText, true);
-            string b = mineText.CleanText(sampleInputText, false);
+            string a = mineText.RemoveSpecialCharacters(sampleInputText, true);
+            string b = mineText.RemoveSpecialCharacters(sampleInputText, false);
             string c = sampleInputText;
 
             string d = mineText.RemoveStopWordsFromText(a);

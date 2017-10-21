@@ -1,5 +1,4 @@
-﻿# the list has been found at https://www.ranks.nl/stopwords
-a
+﻿a
 able
 about
 above
