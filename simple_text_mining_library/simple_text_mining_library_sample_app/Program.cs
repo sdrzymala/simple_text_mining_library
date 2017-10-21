@@ -29,6 +29,7 @@ namespace simple_text_mining_library_sample_app
 
             List<string> e = mineText.N1GramAnalysis(d);
             List<string> f = mineText.N2GramAnalysis(d);
+            List<string> g = mineText.N3GramAnalysis(d);
 
         }
     }
