@@ -89,5 +89,87 @@ namespace simple_text_mining_library
 
             return outputText.ToLower();
         }
+
+        /// <summary>
+        /// Return N=1 gram list from text
+        /// </summary>
+        /// <param name="inputText"></param>
+        /// <returns></returns>
+        public List<string> N1GramAnalysis(string inputText)
+        {
+            return inputText.Split(' ').ToList();
+        }
+
+        /// <summary>
+        /// Return N=1 gram list from text
+        /// </summary>
+        /// <param name="inputText"></param>
+        /// <returns></returns>
+        public List<string> N2GramAnalysis(string inputText)
+        {
+            List<string> words = inputText.Split(' ').ToList();
+            List<string> tokens = new List<string>();
+
+            for (int i = 0; i < words.Count() - 1; i++)
+            {
+                tokens.Add(words[i] + " " + words[i+1]);
+            }
+
+            return tokens;
+        }
+
+        /// <summary>
+        /// Return N=3 gram list from text
+        /// </summary>
+        /// <param name="inputText"></param>
+        /// <returns></returns>
+        public List<string> N3GramAnalysis(string inputText)
+        {
+            List<string> words = inputText.Split(' ').ToList();
+            List<string> tokens = new List<string>();
+
+            for (int i = 0; i < words.Count() - 2; i++)
+            {
+                tokens.Add(words[i] + " " + words[i + 1] + " " + words[i + 2]);
+            }
+
+            return tokens;
+        }
+
+        /// <summary>
+        /// Return N=4 gram list from text
+        /// </summary>
+        /// <param name="inputText"></param>
+        /// <returns></returns>
+        public List<string> N4GramAnalysis(string inputText)
+        {
+            List<string> words = inputText.Split(' ').ToList();
+            List<string> tokens = new List<string>();
+
+            for (int i = 0; i < words.Count() - 3; i++)
+            {
+                tokens.Add(words[i] + " " + words[i + 1] + " " + words[i + 2] + " " + words[i + 3]);
+            }
+
+            return tokens;
+        }
+
+        /// <summary>
+        /// Return N=5 gram list from text
+        /// </summary>
+        /// <param name="inputText"></param>
+        /// <returns></returns>
+        public List<string> N5GramAnalysis(string inputText)
+        {
+            List<string> words = inputText.Split(' ').ToList();
+            List<string> tokens = new List<string>();
+
+            for (int i = 0; i < words.Count() - 4; i++)
+            {
+                tokens.Add(words[i] + " " + words[i + 1] + " " + words[i + 2] + " " + words[i + 3] + " " + words[i + 4]);
+            }
+
+            return tokens;
+        }
     }
 }
