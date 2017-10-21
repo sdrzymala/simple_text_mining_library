@@ -135,5 +135,23 @@ namespace simple_text_mining_library
 
             return tokens;
         }
+
+        /// <summary>
+        /// Return N=4 gram list from text
+        /// </summary>
+        /// <param name="inputText"></param>
+        /// <returns></returns>
+        public List<string> N4GramAnalysis(string inputText)
+        {
+            List<string> words = inputText.Split(' ').ToList();
+            List<string> tokens = new List<string>();
+
+            for (int i = 0; i < words.Count() - 3; i++)
+            {
+                tokens.Add(words[i] + " " + words[i + 1] + " " + words[i + 2] + " " + words[i + 3]);
+            }
+
+            return tokens;
+        }
     }
 }
