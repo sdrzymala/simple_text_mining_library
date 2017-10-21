@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace simple_text_mining_library
 {
-    public class Class1
+    public class MineText
     {
     }
 }
