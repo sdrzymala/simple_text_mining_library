@@ -1,4 +1,6 @@
-﻿using System;
+﻿using simple_text_mining_library;
+using simple_text_mining_library.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,11 @@ namespace simple_text_mining_library_sample_app
     {
         static void Main(string[] args)
         {
+
+            MineText mineText = new MineText();
+            mineText.textMiningLanguage = TextMiningLanguage.English;
+            mineText.RemoveStopWordsFromText();
+
         }
     }
 }
