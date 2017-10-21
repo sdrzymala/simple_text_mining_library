@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace simple_text_mining_library
+namespace simple_text_mining_library.Classes
 {
-    public class Class1
+    public enum TextMiningLanguage
     {
+        English,
+        Polish
     }
 }
