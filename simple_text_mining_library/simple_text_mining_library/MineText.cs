@@ -153,5 +153,23 @@ namespace simple_text_mining_library
 
             return tokens;
         }
+
+        /// <summary>
+        /// Return N=5 gram list from text
+        /// </summary>
+        /// <param name="inputText"></param>
+        /// <returns></returns>
+        public List<string> N5GramAnalysis(string inputText)
+        {
+            List<string> words = inputText.Split(' ').ToList();
+            List<string> tokens = new List<string>();
+
+            for (int i = 0; i < words.Count() - 4; i++)
+            {
+                tokens.Add(words[i] + " " + words[i + 1] + " " + words[i + 2] + " " + words[i + 3] + " " + words[i + 4]);
+            }
+
+            return tokens;
+        }
     }
 }
