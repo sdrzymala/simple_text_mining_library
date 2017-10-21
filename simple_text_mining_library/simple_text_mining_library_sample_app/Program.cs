@@ -14,13 +14,17 @@ namespace simple_text_mining_library_sample_app
         static void Main(string[] args)
         {
 
-            string filePath = Directory.GetFiles("C:/test/books/").Where(x=>x.Contains("12383")).First();
+            string filePath = Directory.GetFiles("C:/test/books/").Where(x => x.Contains("12383")).First();
             string sampleInputText = File.ReadAllText(filePath);
 
             MineText mineText = new MineText();
             mineText.textMiningLanguage = TextMiningLanguage.English;
 
-            string d = mineText.RemoveStopWordsFromText(sampleInputText);
+            string a = mineText.CleanText(sampleInputText, true);
+            string b = mineText.CleanText(sampleInputText, false);
+            string c = sampleInputText;
+
+            string d = mineText.RemoveStopWordsFromText(a);
 
         }
     }
