@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simple_text_mining_library", "simple_text_mining_library\simple_text_mining_library.csproj", "{1175B0FE-AEB4-4FC3-8443-EAF59D665091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simple_text_mining_library_sample_app", "simple_text_mining_library_sample_app\simple_text_mining_library_sample_app.csproj", "{FECFB108-FEE9-48A5-A33B-B27706D90DF1}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1175B0FE-AEB4-4FC3-8443-EAF59D665091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1175B0FE-AEB4-4FC3-8443-EAF59D665091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1175B0FE-AEB4-4FC3-8443-EAF59D665091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1175B0FE-AEB4-4FC3-8443-EAF59D665091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FECFB108-FEE9-48A5-A33B-B27706D90DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FECFB108-FEE9-48A5-A33B-B27706D90DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FECFB108-FEE9-48A5-A33B-B27706D90DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FECFB108-FEE9-48A5-A33B-B27706D90DF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
