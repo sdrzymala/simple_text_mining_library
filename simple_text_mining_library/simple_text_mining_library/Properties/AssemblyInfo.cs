@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("simple_text_mining_sample_app")]
+[assembly: AssemblyTitle("simple_text_mining_library")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("simple_text_mining_sample_app")]
+[assembly: AssemblyProduct("simple_text_mining_library")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d7080846-0377-49f6-a332-33e5703d8f34")]
+[assembly: Guid("1175b0fe-aeb4-4fc3-8443-eaf59d665091")]
 
 // Version information for an assembly consists of the following four values:
 //
