@@ -27,6 +27,8 @@ namespace simple_text_mining_library_sample_app
 
             string d = mineText.RemoveStopWordsFromText(a);
 
+            List<string> e = mineText.N1GramAnalysis(d);
+
         }
     }
 }

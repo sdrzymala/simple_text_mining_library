@@ -89,5 +89,10 @@ namespace simple_text_mining_library
 
             return outputText.ToLower();
         }
+
+        public List<string> N1GramAnalysis(string inputText)
+        {
+            return inputText.Split(' ').ToList();
+        }
     }
 }
