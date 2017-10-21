@@ -47,7 +47,7 @@ namespace simple_text_mining_library
         /// <returns></returns>
         public string RemoveStopWordsFromText(string inputText)
         {
-            List<string> allStopWords = File.ReadAllLines(currentBasicStopWordsFilePath).ToList().Where(x=> !x.Contains("#")).ToList();
+            List<string> allStopWords = File.ReadAllLines(currentBasicStopWordsFilePath).ToList();
             StringBuilder outputText = new StringBuilder();
 
             foreach (string word in inputText.Split(' '))
