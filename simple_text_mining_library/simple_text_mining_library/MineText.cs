@@ -91,7 +91,7 @@ namespace simple_text_mining_library
         }
 
         /// <summary>
-        /// Remote N=1 gram list from text
+        /// Return N=1 gram list from text
         /// </summary>
         /// <param name="inputText"></param>
         /// <returns></returns>
@@ -100,6 +100,11 @@ namespace simple_text_mining_library
             return inputText.Split(' ').ToList();
         }
 
+        /// <summary>
+        /// Return N=1 gram list from text
+        /// </summary>
+        /// <param name="inputText"></param>
+        /// <returns></returns>
         public List<string> N2GramAnalysis(string inputText)
         {
             List<string> words = inputText.Split(' ').ToList();
