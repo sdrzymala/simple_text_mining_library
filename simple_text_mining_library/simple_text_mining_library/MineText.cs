@@ -99,5 +99,18 @@ namespace simple_text_mining_library
         {
             return inputText.Split(' ').ToList();
         }
+
+        public List<string> N2GramAnalysis(string inputText)
+        {
+            List<string> words = inputText.Split(' ').ToList();
+            List<string> tokens = new List<string>();
+
+            for (int i = 0; i < words.Count() - 1; i++)
+            {
+                tokens.Add(words[i] + " " + words[i+1]);
+            }
+
+            return tokens;
+        }
     }
 }
