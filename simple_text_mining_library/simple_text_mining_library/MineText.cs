@@ -51,5 +51,26 @@ namespace simple_text_mining_library
 
             return outputText.ToString().TrimEnd();
         }
+
+        public string CleanText(string inputText, bool removeNumbers)
+        {
+            // remove urls
+            string outputText = Regex.Replace(inputText, @"http[^\s]+", " ", RegexOptions.Compiled);
+
+            // remove special characters
+            if (!removeNumbers)
+            {
+                outputText = Regex.Replace(outputText, "[^a-zA-Z0-9 ]+", " ", RegexOptions.Compiled);
+            }
+            else
+            {
+                outputText = Regex.Replace(outputText, "[^a-zA-Z ]+", " ", RegexOptions.Compiled);
+            }
+
+            // clean spaces
+            outputText = Regex.Replace(outputText, @"\s+", " ", RegexOptions.Compiled);
+
+            return outputText.ToLower();
+        }
     }
 }
