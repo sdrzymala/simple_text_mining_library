@@ -10,7 +10,7 @@
 * English
 
 ### Planned features:
-* Stemmings
+* Stemming
 
 ### Goals:
 * Create an easy and stable text mining library for C#
