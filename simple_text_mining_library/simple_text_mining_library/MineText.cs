@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace simple_text_mining_library
@@ -38,10 +39,17 @@ namespace simple_text_mining_library
         public string RemoveStopWordsFromText(string inputText)
         {
             List<string> allStopWords = File.ReadAllLines(currentBasicStopWordsFilePath).ToList().Where(x=> !x.Contains("#")).ToList();
+            StringBuilder outputText = new StringBuilder();
 
+            foreach (string word in inputText.Split(' '))
+            {
+                if (!allStopWords.Contains(word))
+                {
+                    outputText.Append(word).Append(" ");
+                }
+            }
 
-
-            return "";
+            return outputText.ToString().TrimEnd();
         }
     }
 }

@@ -14,11 +14,13 @@ namespace simple_text_mining_library_sample_app
         static void Main(string[] args)
         {
 
-            string myTextToMine = File.ReadAllText(@"‪C:\test\books\12383.txt");
+            string filePath = Directory.GetFiles("C:/test/books/").Where(x=>x.Contains("12383")).First();
+            string sampleInputText = File.ReadAllText(filePath);
 
             MineText mineText = new MineText();
             mineText.textMiningLanguage = TextMiningLanguage.English;
-            mineText.RemoveStopWordsFromText(myTextToMine);
+
+            string d = mineText.RemoveStopWordsFromText(sampleInputText);
 
         }
     }
