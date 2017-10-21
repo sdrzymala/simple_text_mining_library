@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>fd5e7dea-dfcc-4607-aa83-42bdef832376</ProjectGuid>
+    <ProjectGuid>1175b0fe-aeb4-4fc3-8443-eaf59d665091</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>simple_text_mining_library</RootNamespace>
