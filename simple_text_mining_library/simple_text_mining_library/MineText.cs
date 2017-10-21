@@ -15,6 +15,9 @@ namespace simple_text_mining_library
         TextMiningLanguage currentTextMiningLanguage;
         string currentBasicStopWordsFilePath;
 
+        /// <summary>
+        /// Specify the language of the text
+        /// </summary>
         public TextMiningLanguage textMiningLanguage
         {
             get
@@ -36,6 +39,12 @@ namespace simple_text_mining_library
             }
         }
 
+        /// <summary>
+        /// Remove stop words from text
+        /// The list of the stop words will be choosen for a particular language defined in the class
+        /// </summary>
+        /// <param name="inputText"></param>
+        /// <returns></returns>
         public string RemoveStopWordsFromText(string inputText)
         {
             List<string> allStopWords = File.ReadAllLines(currentBasicStopWordsFilePath).ToList().Where(x=> !x.Contains("#")).ToList();
@@ -52,7 +61,15 @@ namespace simple_text_mining_library
             return outputText.ToString().TrimEnd();
         }
 
-        public string CleanText(string inputText, bool removeNumbers)
+        /// <summary>
+        /// Remove special characters from input text
+        /// When removeNumber set to true numbers will be deleted
+        /// When removeNumber set to false number will not be deleted
+        /// </summary>
+        /// <param name="inputText"></param>
+        /// <param name="removeNumbers"></param>
+        /// <returns></returns>
+        public string RemoveSpecialCharacters(string inputText, bool removeNumbers)
         {
             // remove urls
             string outputText = Regex.Replace(inputText, @"http[^\s]+", " ", RegexOptions.Compiled);
