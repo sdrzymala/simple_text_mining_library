@@ -90,6 +90,11 @@ namespace simple_text_mining_library
             return outputText.ToLower();
         }
 
+        /// <summary>
+        /// Remote N=1 gram list from text
+        /// </summary>
+        /// <param name="inputText"></param>
+        /// <returns></returns>
         public List<string> N1GramAnalysis(string inputText)
         {
             return inputText.Split(' ').ToList();
